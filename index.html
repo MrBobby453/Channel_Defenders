@@ -262,11 +262,12 @@
       } else {
         const background = new Image();
         background.src = 'boat.png';
+        ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
         ctx.fillStyle='cyan'; ctx.font='30px monospace';
         ctx.fillText("GAME OVER!", canvas.width / 2 - 90, 100);
         ctx.fillText("All your hotels belong to Us!", canvas.width / 2 - 90, 140);
         ctx.font='20px monospace'; ctx.fillText("Refresh to restart", canvas.width/2 - 80, canvas.height/2 + 40);
-        ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+     
       }
     }
 
