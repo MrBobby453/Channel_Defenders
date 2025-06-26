@@ -263,10 +263,18 @@
         const background = new Image();
         background.src = 'boat.png';
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-        ctx.fillStyle='cyan'; ctx.font='30px monospace';
-        ctx.fillText("GAME OVER!", canvas.width / 2 - 150, 100);
-        ctx.fillText("All your hotels belong to Us!", canvas.width / 2 - 150, 140);
-        ctx.font='20px monospace'; ctx.fillText("Refresh to restart", canvas.width/2 - 80, canvas.height/2 + 40);
+        ctx.fillStyle = 'cyan';
+        ctx.font = '30px monospace';
+        const text1 = "GAME OVER!";
+        const text2 = "All your hotels belong to Us!";
+        const text3 = "Refresh to restart";
+
+        // Centered using measureText
+        ctx.fillText(text1, canvas.width / 2 - ctx.measureText(text1).width / 2, 100);
+        ctx.fillText(text2, canvas.width / 2 - ctx.measureText(text2).width / 2, 140);
+
+        ctx.font = '20px monospace';
+        ctx.fillText(text3, canvas.width / 2 - ctx.measureText(text3).width / 2, canvas.height / 2 + 40);
      
       }
     }
