@@ -15,20 +15,32 @@
       font-family: Arial;
     }
 
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* prevent horizontal scrolling */
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    
     canvas {
-      display: block;
-      margin: 20px auto;
-      width: 640px;
-      height: 480px;
-      background: url('background.jpg') no-repeat center center;
-      background-size: cover;
-      border: 3px solid #000;
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+        background: url('background.jpg') no-repeat center center;
+        background-size: cover;
+        border: 3px solid #000;
     }
 
     #mobile-controls {
-      display: none;
-      margin-top: 10px;
-    }
+  display: none;
+  margin: 10px auto;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+}
 
     .ctrl-btn {
       font-size: 24px;
