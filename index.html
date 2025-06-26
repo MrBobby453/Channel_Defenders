@@ -190,7 +190,7 @@
       const pounds = (elapsed * 10000).toLocaleString();
       ctx.fillStyle = 'cyan';
       ctx.font = '16px monospace';
-      ctx.fillText(`Score: ${score}  |  Lives:b ${player.lives}  |  Wave: ${wave}  |  £ Wasted: £${pounds}`, 10, 20);
+      ctx.fillText(`Score: ${score}  |  Lives: ${player.lives}  |  Wave: ${wave}  |  £ Wasted: £${pounds}`, 10, 20);
     }
 
     function handleKeys() {
@@ -260,7 +260,7 @@
         if (boats.length === 0) wave++, spawnBoats(wave);
         requestAnimationFrame(gameLoop);
       } else {
-        ctx.fillStyle='white'; ctx.font='30px Arial';
+        ctx.fillStyle='cyan'; ctx.font='30px monospace';
         ctx.fillText("GAME OVER!", canvas.width / 2 - 90, 100);
         ctx.fillText("All your hotels belong to Us!", canvas.width / 2 - 90, 140);
         ctx.font='20px Arial'; ctx.fillText("Refresh to restart", canvas.width/2 - 80, canvas.height/2 + 40);
